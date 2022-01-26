@@ -1,16 +1,17 @@
 import React from 'react';
 import { matchRoutes, renderRoutes } from "react-router-config";
 import App from './App';
-import Content from './component/layout/content';
+import Content from './component/content';
+import Edit from './component/edit';
 class Home extends React.Component {
     render () {
       console.log(this.props.route.routes, '====this.props.route.routes')
-      return <div>home{renderRoutes(this.props.route.routes)}</div>
+      return <div>home</div>
     }
 }
-class Article extends React.Component {
+class Detail extends React.Component {
     render () {
-        return <div>Article</div>
+        return <div>Detail</div>
     }
 }
 class NotFound extends React.Component {
@@ -22,19 +23,23 @@ const routeConfig = [
   {
     component: App,
     routes: [
-      { path: '/home', component: Home },
-      { path: '/articlelist',
+      { path: '/home', component: Home, name: '首页' },
+      { path: '/article/list',
         component: Content,
-        routes: [
-          { path: '/articlelist/:id', component: Article },
-          { path: 'articlelist/:id',
-            onEnter: function (nextState, replaceState) {
-              replaceState(null, '/articlelist/' + nextState.params.id)
-            }
-          }
-        ]
-      }
-    ]
+        name: '文章列表'
+      },
+      { path: '/article/detail/:id',
+        component: Detail,
+        name: '文章详情',
+        show: false
+      },
+      { path: '/article/edit/:id',
+        component: Edit,
+        name: '文章编辑',
+        show: false
+      },
+      { path: '/*', component: NotFound, show: false },
+    ],
   }
 ]
 export default routeConfig;

@@ -1,3 +1,21 @@
 .nav {
-    width: 12vw;
+    width: 16%;
+    background-color: #fff;
+    /* height: 100vh; */
+}
+.nav a {
+    display: block;
+    padding: 20px 15px 0;
+}
+.nav .nav_title {
+    padding: 20px 10px;
+    background-color: #1E87F0;
+    color: #fff;
+    font-size: 24px;
+}
+.nav .nav_column {
+    padding: 0 10px;
+}
+.nav .active {
+    color: #1E87F0;
 }

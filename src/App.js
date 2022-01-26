@@ -2,29 +2,31 @@ import React from 'react';
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import { matchRoutes, renderRoutes } from "react-router-config";
 import './App.css';
-import './common/style/default.css';
+import './common/style/custome.css';
 import Nav from './component/layout/nav';
-import Head from './component/layout/head';
-import Content from './component/layout/content';
+import Header from './component/layout/header';
+import Content from './component/content';
 import routeConfig from './routeConfig';
 
 class App extends React.Component {
   constructor (props) {
     super(props);
-    console.log(props.route.routes, '=====props')
+    console.log(props.route.routes, props, '=====props')
   }
 
   componentDidMount() {
   }
 
   render() {
-
+    console.log(this.props.route.routes, '====this.props.route.routes')
     return (
-      <div>
+      <div className='app_common'>
         <Nav></Nav>
         <div className="container">
-          <Head></Head>
-          {renderRoutes(this.props.route.routes)}
+          <Header />
+          <div className="match_component">
+            {renderRoutes(this.props.route.routes)}
+          </div>
         </div>
       </div>
     )
