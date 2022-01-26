@@ -1,0 +1,7 @@
+@import url('./default.css');
+body {
+    background-color: #F5F5F5;
+}
+.app_common {
+    display: flex;
+}

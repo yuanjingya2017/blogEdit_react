@@ -1,0 +1,71 @@
+.content {
+    font-weight: bold;
+    /* padding: 20px; */
+    /* background-color: #61dafb; */
+}
+.content .content_add {
+    background-color: #F83600;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 6px;
+    margin-bottom: 30px;
+    float: right;
+}
+.list {
+    clear: both;
+    border-top: 1px dashed #eee;
+}
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+.list-item div, .list-item a {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 400;
+}
+.liit-id {
+    width: 10%;
+}
+.liit-title {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.liit-content {
+    width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.liit-publish-status {
+    width: 10%;
+}
+.liit-date {
+    width: 20%;
+}
+.list-item .liit-opreate {
+}
+.list-item .liit-opreate div {
+    color: #fff;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+.list-item .liit-opreate .liit-opreate-edit {
+    background-color: #ee14b84d;
+}
+.list-item .liit-opreate .liit-opreate-del {
+    background-color: #F9D423;
+}
+.list-item .liit-opreate .liit-opreate-up {
+    background-color: #2AF598;
+}
+.list-item .liit-opreate .liit-opreate-down {
+    background-color: #40BCF9;
+}
