@@ -1,13 +1,16 @@
 import './nav.css';
 import routeConfig from '../../routeConfig';
 import React from 'react';
+
 export default class Nav extends React.Component {
     constructor (props) {
         super(props);
+        console.log(props, '====props')
+    }
+    componentDidMount () {
+        console.log(this.props, '===componentDidMount')
     }
     render () {
-        console.log(routeConfig, '===routeConfig');
-        console.log(this.props, '=====props')
         const route = routeConfig;
         return (<nav className="nav">
             <div className='nav_title'>文章管理系统</div>

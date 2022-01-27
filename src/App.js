@@ -21,7 +21,7 @@ class App extends React.Component {
     console.log(this.props.route.routes, '====this.props.route.routes')
     return (
       <div className='app_common'>
-        <Nav></Nav>
+        <Nav {...this.props}></Nav>
         <div className="container">
           <Header />
           <div className="match_component">

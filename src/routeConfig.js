@@ -5,7 +5,6 @@ import Content from './component/content';
 import Edit from './component/edit';
 class Home extends React.Component {
     render () {
-      console.log(this.props.route.routes, '====this.props.route.routes')
       return <div>home</div>
     }
 }

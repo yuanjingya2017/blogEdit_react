@@ -4,6 +4,7 @@ import './index.css';
 export default class Content extends React.Component {
   constructor(props) {
     super(props);
+    console.log(props, '====props content')
     this.state = {dataArr: [
       {
         title: '标题',
@@ -50,7 +51,6 @@ export default class Content extends React.Component {
 }]};
   }
   render() {
-    console.log(this.state.dataArr, '====this.state.data')
     return (
         <div className="content">
           <div className="content_add">新增文章</div>
